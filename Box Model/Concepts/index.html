@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box Model</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>CSS Box Model</h1>
+    <div class="links">
+      <a href="#chapter5">klkl </a>
+    </div>
+    <section class="chapter chapter-01">
+      <h2>Sizing and Overflow</h2>
+      <div class="box box-1">
+        <h3>Box 1</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+          blanditiis voluptatum laborum, quas error voluptates!
+        </p>
+      </div>
+      <div class="box box-2">
+        <h3>Box 2</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+          blanditiis voluptatum laborum, quas error voluptates!
+        </p>
+      </div>
+      <div class="box box-3">
+        <h3>Box 3</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+          blanditiis voluptatum laborum, quas error voluptates!
+        </p>
+      </div>
+      <div class="note">
+        <h3>code sample</h3>
+        <pre>
+          .chapter-01 .box {
+            background-color: blue;
+            color: wheat;
+            padding: 10px;
+            border: 2px solid pink;
+            margin: 10px;
+          }
+          
+          .chapter-01 .box-1 {
+            /* modifing the content size*/
+            width: 200px;
+            height: 100px; /* this is causing content overflowing*/
+            /* overflow: hidden; */
+            /* overflow: scroll; */
+            /* overflow-x: scroll; */
+            overflow-y: scroll;
+          }
+          
+          .chapter-01 .box-2 {
+            width: 50%; /* 50% of the container width, it will responsive*/
+          }
+          
+          .chapter-01 .box-3 {
+            max-width: 700px; /* width will be max upto 700px, will not go further even extend more*/
+            min-width: 500px; /* width will be minimize upto 500px, will not shrink less than that*/
+          }
+          
+        </pre>
+      </div>
+    </section>
+    <section class="chapter chapter-02">
+      <h2>Padding</h2>
+      <div class="box">
+        <h3>The Box</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ea
+          temporibus cumque suscipit aliquid veritatis magnam quo tempora
+          consequuntur quisquam.
+        </p>
+      </div>
+      <div class="note">
+        <pre>
+          .chapter-02 .box {
+            background-color: blue;
+            color: white;
+            width: 300px;
+          
+            /* padding all sides*/
+            /* padding: 20px; */
+          
+            /* T-R-B-L */
+            padding: 30px 20px 10px 25px;
+            /* TB-RL */
+            padding: 40px 100px;
+            /* T-RL-B */
+            padding: 30px 50px 10px;
+          }
+          
+        </pre>
+      </div>
+    </section>
+    <section class="chapter chapter-03">
+      <h2>margin</h2>
+      <div style="background-color: rgb(124, 107, 107)">
+        <pre>
+          Emmet to create below structure
+          div.box.box-$*3>h3{Box $}+p>lorem15
+        </pre>
+      </div>
+      <div class="box box-1">
+        <h3>Box 1</h3>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste
+          repellat non natus nesciunt quasi laboriosam?
+        </p>
+      </div>
+      <div class="box box-2">
+        <h3>Box 2</h3>
+        <p>
+          Amet suscipit dolorum eaque assumenda animi earum itaque modi est eos?
+          Quae non beatae distinctio?
+        </p>
+      </div>
+      <div class="box box-3">
+        <h3>Box 3</h3>
+        <p>
+          Laboriosam animi quae itaque voluptatem similique? Enim perspiciatis
+          omnis temporibus, illum fugiat commodi harum sapiente.
+        </p>
+      </div>
+      <div class="note">
+        <pre>
+          .chapter-03 h3,
+          p {
+            margin: 0; /*it could be handled by the universal selector*/
+          }
+          .chapter-03 .box {
+            background-color: coral;
+            padding: 20px;
+            margin: 10px;
+          }
+          .chapter-03 .box-1 {
+            /* margin-top: 30px;
+            margin-right: 25px;
+            margin-bottom: 50px;
+            margin-left: 40px; */
+            /* short hand T-R-B-L*/
+            margin: 30px 25px 50px 40px;
+          }
+          .chapter-03 .box-2 {
+            max-width: 200px;
+            margin: auto; /* in top and bottom -- no margin*/
+            /* auto -- put the box in the middle, adjusting the left and right margin*/
+            margin: 25px auto; /*in top and bottom -- 25px margin*/
+          }
+          .chapter-03 .box-3 {
+            max-width: 500px;
+            margin-left: -100px;
+            margin-right: -100px;
+          }
+          </pre
+        >
+      </div>
+    </section>
+    <section class="chapter chapter-04">
+      <h2>Universal Selector and Box-Sizing property</h2>
+      <p>
+        Box-sizing: <strong>content-box</strong> which is default or
+        <strong>box-sizing</strong>
+      </p>
+      <ul style="padding: 0 20px">
+        <li>
+          <strong>border-box</strong>: it includes the additional margin and
+          padding value within the content's width. which is desirable in most
+          case.
+        </li>
+        <li>
+          <strong>content-box</strong>: in this case, content-box width is
+          fixed, if i add margin and padding on top of it, it will add up to the
+          content's width and that will render on the screen.
+        </li>
+      </ul>
+      <p>
+        <strong>universal selector *,</strong> use to reset default behaviors or
+        to add some property to all elements to the page
+      </p>
+      <div class="box box-1">
+        <h3>Box 1</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+          tempore, quaerat impedit repudiandae incidunt non!
+        </p>
+      </div>
+      <div class="box box-2">
+        <h3>Box 2</h3>
+        <p>
+          Id sequi exercitationem quo, eum perferendis, soluta ullam rem nulla
+          inventore tempora voluptas quidem nisi.
+        </p>
+      </div>
+      <div class="box box-3">
+        <h3>Box 3</h3>
+        <p>
+          Fugit mollitia, unde rerum recusandae molestias quam rem sunt iure
+          amet optio, odio laboriosam sapiente.
+        </p>
+        <ul>
+          <li>item 1</li>
+          <li>item 2</li>
+          <li>item 3</li>
+        </ul>
+      </div>
+      <div class="note">
+        <pre>
+          * {
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            /* border: 4px solid red; */
+            box-sizing: border-box;
+          }
+          .chapter-04 .box {
+            margin: 10px auto;
+            padding: 15px;
+            max-width: 300px;
+            border: 4px solid black;
+          }
+          .chapter-04 .box-3 ul {
+            padding: 20px;
+          }
+          .chapter-04 .box-1 {
+            border-radius: 10px;
+          }
+          .chapter-04 .box-2 {
+            border-top: 4px solid red;
+            border-left-style: dashed;
+            border-right-style: dashed;
+            border-bottom: 4px solid blue;
+          }
+          .chapter-04 .box-3 {
+            border-top-left-radius: 10px;
+            border-left: none;
+            border-bottom-right-radius: 10px;
+          }
+        </pre>
+      </div>
+    </section>
+    <section class="chapter chapter-05" id="chapter5">
+      <h2>display property</h2>
+
+      <h3 class="none-el">display none</h3>
+      <h3 class="hidden-el">visibility hidden</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci,
+        ducimus. Corrupti quidem totam hic ullam.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde maiores
+        mollitia sequi repellendus adipisci, odit modi! Deserunt totam ad
+        dolorum.
+      </p>
+      <a href="#">Link1</a>
+      <a href="#">Link2</a>
+      <a href="#">Link3</a>
+      <div class="note">
+        <pre>
+          /* chapter 05*/
+.chapter-05 .none-el {
+  display: none;
+}
+
+.chapter-05 .hidden-el {
+  visibility: hidden;
+}
+
+.chapter-05 p {
+  /* display: inline; */
+}
+.chapter-05 a {
+  /* display: block; */
+  display: inline-block; /*it can use all properties of inline and block level elements*/
+  padding: 15px;
+  width: 100px;
+  background-color: coral;
+  /* margin: 10px; */
+}
+        </pre>
+      </div>
+    </section>
+  </body>
+</html>
