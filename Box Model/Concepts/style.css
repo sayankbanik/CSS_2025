@@ -5,6 +5,10 @@ h1 {
 }
 h2 {
   text-decoration: underline;
+  margin: 10px;
+}
+.links a {
+  margin: 10px;
 }
 .note pre {
   color: white;
