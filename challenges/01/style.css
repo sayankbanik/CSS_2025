@@ -1,0 +1,38 @@
+body {
+  font-family: Lato, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+}
+.header {
+  background-color: #5e175b;
+  color: white;
+}
+.header h1 {
+  text-align: center;
+  font-size: 40px;
+  text-indent: 20px;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+ul.main-menu {
+  background-color: #f4f4f4;
+  text-transform: uppercase;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+a:hover {
+  color: rebeccapurple;
+  font-weight: bold;
+}
+.main-menu li a:active {
+  color: red;
+}
+p.lead {
+  font-weight: bold;
+  font-size: 20px;
+  color: rebeccapurple;
+}
