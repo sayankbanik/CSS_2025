@@ -3,11 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+
+    <link rel="stylesheet" href="solution.css" />
   </head>
   <body>
-    <div class="main">
+    <!--My Solution  -->
+    <!-- <div class="main">
       <div class="form">
         <h2>Need to hire a freelancer?</h2>
         <p>Sign up, type in what you need and recieve free quotes in seconds</p>
@@ -19,6 +28,27 @@
         />
         <button type="submit">Post a Project</button>
       </div>
-    </div>
+    </div> -->
+
+    <!-- Actual Solution -->
+    <main class="container">
+      <div class="card">
+        <h1>Need to hire a freelancer?</h1>
+        <p>Sign up, type in what you need and recieve free quotes in seconds</p>
+        <form>
+          <div class="form-grp">
+            <input
+              type="text"
+              id="text"
+              name="text"
+              placeholder="What do you need?"
+            />
+          </div>
+          <div class="form-grp">
+            <button type="submit">Post a Project</button>
+          </div>
+        </form>
+      </div>
+    </main>
   </body>
 </html>
