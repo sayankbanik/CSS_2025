@@ -1,0 +1,32 @@
+* {
+  background-color: black;
+  color: white;
+}
+
+/* Adjacent Selectors*/
+h2 + p {
+  color: red;
+}
+
+/* Sibling Combinator*/
+h2 ~ p {
+  color: rgb(116, 211, 151);
+}
+
+/* pseudo-elements */
+p::first-line {
+  background-color: gray;
+}
+p::first-letter {
+  font-size: 300%;
+}
+
+p:first-of-type::first-letter {
+  color: blue;
+}
+/* selects the first sibling paragarph*/
+
+p::selection {
+  color: red;
+  background-color: yellow;
+}
