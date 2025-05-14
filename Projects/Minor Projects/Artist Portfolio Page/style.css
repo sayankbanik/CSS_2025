@@ -1,0 +1,74 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Cormorant", sans-serif;
+  box-sizing: border-box;
+  font-weight: 300;
+}
+
+h1 {
+  display: inline-block;
+  margin: 0 32px 0 0;
+}
+.links {
+  display: inline-block;
+}
+.links li {
+  display: inline-block;
+}
+.links a {
+  text-decoration: none;
+  color: black;
+  margin: 0 8px;
+  font-size: 20px;
+}
+.navbar {
+  margin: 32px;
+}
+a.active {
+  border-bottom: 1px solid black;
+}
+
+.gallery {
+  padding: 16px;
+}
+.cards {
+  width: 49.75%;
+  display: inline-block;
+  /* margin: 10px; as it is not in box-sizing*/
+  /* margin: 0 0 0 10px; */
+  /* border: 1px solid red; */
+  padding: 10px;
+}
+.cards img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+.cards img:hover {
+  opacity: 0.9;
+}
+.cards h2 {
+  margin: 5px 0 16px 0;
+}
+
+.about {
+  margin: 100px 0 80px 200px;
+  width: 40%;
+  min-width: 600px;
+}
+.about h3 {
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+.cta {
+  border-bottom: 2px solid black;
+  display: inline-block;
+  padding-bottom: 6px;
+}
+.contact {
+  margin-top: 100px;
+}
+.contact p {
+  font-size: 20px;
+}
